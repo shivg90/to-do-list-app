@@ -1,13 +1,13 @@
 // jquery //
 // step 1. //
 function newItem() {
-       let list = $('#list');
+let list = $('#list');
        /* instead of createElement */ 
-       let li = $('<li></li>'); 
+let li = $('<li></li>'); 
       /* creates a variable to store the value in */
-       let inputValue = $('#input').val(); 
+let inputValue = $('#input').val(); 
       /* appends the value into the list item element */
-       li.append(inputValue); 
+li.append(inputValue); 
       // if statements same as js but use $ or # to select jquery element //
        if (!inputValue) {  
         alert("You must write something!");
@@ -23,21 +23,19 @@ function crossOut() {
       li.toggleClass("strike");
   }
     // event listener, when li is dbl clicked call the crossout function and action //
-      li.on("dblclick", function crossOut() {
-      li.toggleClass("strike");
-});
+      li.on("dblclick", crossOut);
 
 // step 3 //
       /* instead of createElement */
-      let deleteButton = $('<deleteButton></deleteButton>');
+let crossOutButton = $('<crossOutButton></crossOutButton>');
       /* can still use document.create for TextNode in jquery */
-      deleteButton.append(document.createTextNode('X'));
-      li.append(deleteButton);
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
       /* instead of event listener */
-      deleteButton.on("click", 'deleteListItem') 
-      function deleteListItem() {
-      li.addClass('delete');
-  };
+crossOutButton.on("click", 'deleteListItem') 
+function deleteListItem() {
+    li.addClass('delete');
+};
 
   // step 4 //
-      $('list').sortable();
+list.sortable();
