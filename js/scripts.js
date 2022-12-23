@@ -10,6 +10,7 @@ let inputValue = $('#input').val();
       /* appends the value into the list item element */
 li.append(inputValue); 
       // if statements same as js but use $ or # to select jquery element //
+      // was not working so used ! to state is value is NOT true then..//
        if (!inputValue) {  
         alert("You must write something!");
     } else {
