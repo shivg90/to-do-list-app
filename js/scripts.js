@@ -32,7 +32,7 @@ let crossOutButton = $('<crossOutButton></crossOutButton>');
 crossOutButton.append(document.createTextNode('X'));
 li.append(crossOutButton);
       /* instead of event listener */
-crossOutButton.on("click", 'deleteListItem') 
+crossOutButton.on("click", deleteListItem) 
 function deleteListItem() {
     li.addClass('delete');
 };
