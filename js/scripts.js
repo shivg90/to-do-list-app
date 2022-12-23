@@ -1,6 +1,6 @@
 // jquery //
 // step 1. //
-function newItem() {
+
        let list = $('#list');
        /* instead of createElement */ 
        let li = $('<li></li>'); 
@@ -14,7 +14,7 @@ function newItem() {
        } else {
          $('#list').append(li);
        }
-}
+
 
 // step 2 //
 
