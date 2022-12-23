@@ -1,6 +1,7 @@
 // jquery //
 // step 1. //
 function newItem() {
+
 let list = $('#list');
        /* instead of createElement */ 
 let li = $('<li></li>'); 
@@ -14,7 +15,7 @@ li.append(inputValue);
     } else {
         $('#list').append(li);
 }
-}
+
 
 // step 2 //
 
@@ -31,7 +32,7 @@ let crossOutButton = $('<crossOutButton></crossOutButton>');
       /* can still use document.create for TextNode in jquery */
 crossOutButton.append(document.createTextNode('X'));
 li.append(crossOutButton);
-      /* instead of event listener */
+      /* instead of event listener */   
 crossOutButton.on("click", deleteListItem) 
 function deleteListItem() {
     li.addClass('delete');
@@ -39,3 +40,5 @@ function deleteListItem() {
 
   // step 4 //
 list.sortable();
+
+}
