@@ -27,7 +27,7 @@ function crossOut() {
 
 // step 3 //
       /* instead of createElement */
-let crossOutButton = $('<crossOutButton></crossOutButton>');
+let crossOutButton = $('<crossOutButton>X</crossOutButton>');
       /* can still use document.create for TextNode in jquery */
 crossOutButton.append(document.createTextNode('X'));
 li.append(crossOutButton);
