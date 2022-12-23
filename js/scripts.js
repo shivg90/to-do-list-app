@@ -9,11 +9,11 @@ function newItem() {
       /* appends the value into the list item element */
        li.append(inputValue); 
       // if statements same as js but use $ or # to select jquery element //
-       if ('inputValue' === '') {  
-         alert("You must write something!");
-       } else {
-         $('#list').append(li);
-       }
+       if (!inputValue) {  
+        alert("You must write something!");
+    } else {
+        $('#list').append(li);
+}
 }
 
 // step 2 //
